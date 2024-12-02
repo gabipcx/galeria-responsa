@@ -1,0 +1,111 @@
+ 
+        .body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f6b8fc;
+            margin: 0;
+            padding: 0;
+            }
+            /*Container da galeria usando Grid */ 
+            .grid-gallery-container {
+           display: grid; /* Ativa o CSS Grid */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Define o grid com colunas flexíveis */ 
+            gap: 10px; /* Espaçamento entre os itens */ 
+            padding: 20px;
+            width: 90%;
+            margin: auto;
+            }
+            /* Cada item da galeria */
+           .grid-gallery-item {
+           border-radius: 25px;
+           overflow: hidden;
+           width: 800%;
+           height: 450%;
+            }
+            /* Estilos para as imagens */ 
+            .grid-gallery-item img {
+            width: 20%; /* Garante que a imagem preencha todo o espaço disponivel*/
+            height: 20%; /* Mantém a proporção da imagem */
+            }
+        
+            .grid-gallery-container:hover .grid-gallery-item:hover{
+                opacity: .4;
+            }
+            .grid-gallery-container .grid-gallery-item {
+                opacity: .1;
+            }
+            /* Cada item da galeria */
+            .grid-gallery-item {
+                margin: 10px;
+                border-radius: 10px;
+                overflow: hidden;
+                width: 1800px; /* Define uma largura fixa para cada item */
+                transition: all .3s;
+            
+            }
+            .grid-gallery-item:hover{
+                transform: translateY(-20px)
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .grid-gallery-container {
+                display: grid;
+                gap: 10px;
+                padding: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+            @media (min-width: 768px) {
+               img {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media (max-width: 768px) and (min-width: 480px) {
+               img  {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (max-width: 400px) {
+              img {
+                    grid-template-columns: 1fr;
+                }
+            }
+            nav {
+                background-color: #f6b8fc;
+                padding: 10px 0;
+            }
+            
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                position: relative; 
+                margin: 0 15px;
+            }
+            
+            nav ul li a {
+                color: rgb(73, 19, 70);
+                text-decoration: none;
+                font-size: 18px;
+                padding: 10px;
+                display: block; 
+                transition: color 0.3s;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            
+            nav ul li a:hover {
+                color: #961f96;
+            }
+    
+            
+            
